@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/primary_watchnow"
+        android:id="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="WatchNow"
+                android:textColor="@color/secondary_watchnow"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/category"
+        android:layout_width="397dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="7dp"
+        android:backgroundTint="@color/white"
+        app:tabIndicatorColor="@color/primary_watchnow"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/primary_watchnow"
+        app:tabTextColor="@color/accent_watchnow">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/now_playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Playing">
+
+        </com.google.android.material.tabs.TabItem>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/coming_soon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming Soon">
+
+        </com.google.android.material.tabs.TabItem>
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/contain"
+        android:layout_width="match_parent"
+        android:layout_height="636dp"
+        android:layout_below="@id/category"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
